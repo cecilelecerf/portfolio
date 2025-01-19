@@ -4,7 +4,7 @@ import { Button, createTheme, MantineTheme } from "@mantine/core";
 import { Barlow } from "next/font/google";
 
 const barlow = Barlow({
-  weight: "400",
+  weight: ["400", "500", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -13,6 +13,7 @@ export const theme = createTheme({
   fontFamilyMonospace: "Monaco, Courier, monospace",
   headings: {
     fontFamily: `${barlow.style.fontFamily}, Greycliff CF, sans-serif`,
+    fontWeight: "400",
   },
   components: {
     Button: Button.extend({

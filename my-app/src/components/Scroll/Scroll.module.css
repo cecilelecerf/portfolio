@@ -1,0 +1,4 @@
+.root {
+  width: fit-content;
+  transition: transform 0.3s ease;
+}

@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import '@mantine/core/styles.css';
-import { Button, ColorSchemeScript, createTheme, Flex, mantineHtmlProps, MantineProvider, MantineTheme, Text, Title } from "@mantine/core";
-import Link from "next/link";
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from "@mantine/core";
 
-import { Barlow } from 'next/font/google'
-import { RootStyleRegistry } from "./EmotionRootStyleRegistry";
-import { emotionTransform, MantineEmotionProvider } from "@mantine/emotion";
 import { theme } from "../../theme";
-
-
-
+import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,36 +20,19 @@ export default function RootLayout({
 }>) {
   return (
 
-    <html lang="en" {...mantineHtmlProps} style={{ height: "100%" }}>
+    <html lang="en" {...mantineHtmlProps} style={{ height: "100%" }}  >
       <head>
         <ColorSchemeScript />
       </head>
 
-      <body style={{ height: "100%", overflow: "hidden" }} >
+      <body style={{
+      }} >
 
-
-        <MantineProvider theme={theme}      >
-          <header>
-            <Flex justify="space-between" m="xl" align="center" mb={100}>
-              <Title>Cécile LECERF</Title>
-              <Flex gap="xl">
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Text fz="h3">Projet</Text>
-                </Link>
-                <Link href="#">
-                  <Text fz="h3">CV</Text>
-                </Link>
-                <Link href="#">
-                  <Text fz="h3">Github</Text>
-                </Link>
-                <Link href="#">
-                  <Text fz="h3">Linkedin</Text>
-                </Link>
-
-              </Flex>
-            </Flex>
-          </header>
-          {children}
+        <MantineProvider theme={theme} >
+          <Header />
+          <main>
+            {children}
+          </main>
         </MantineProvider>
 
       </body >
