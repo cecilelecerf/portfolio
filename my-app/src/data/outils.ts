@@ -1,16 +1,16 @@
-import react from "../assets/logo/react.png";
-import vue from "../assets/logo/vue.png";
-import symfony from "../assets/logo/sf.png";
-import node from "../assets/logo/node.png";
-import docker from "../assets/logo/docker.png";
-import notion from "../assets/logo/notion.png";
-import gitlab from "../assets/logo/gitlab.png";
-import figma from "../assets/logo/figma.svg";
-import drive from "../assets/logo/drive.png";
-import ts from "../assets/logo/ts.png";
-import js from "../assets/logo/js.png";
-import php from "../assets/logo/php.png";
-import { StaticImageData } from "next/image";
+import react from '../assets/logo/react.png';
+import vue from '../assets/logo/vue.png';
+import symfony from '../assets/logo/sf.png';
+import node from '../assets/logo/node.png';
+import docker from '../assets/logo/docker.png';
+import notion from '../assets/logo/notion.png';
+import gitlab from '../assets/logo/gitlab.png';
+import figma from '../assets/logo/figma.svg';
+import drive from '../assets/logo/drive.png';
+import ts from '../assets/logo/ts.png';
+import js from '../assets/logo/js.png';
+import php from '../assets/logo/php.png';
+import { StaticImageData } from 'next/image';
 
 export type Outils = {
   name: string;
@@ -19,97 +19,97 @@ export type Outils = {
 
 export const frameworks: Record<string, Outils> = {
   react: {
-    name: "React",
+    name: 'React',
     logo: react,
   },
   next: {
-    name: "Next",
+    name: 'Next',
   },
   vue: {
-    name: "Vue",
+    name: 'Vue',
     logo: vue,
   },
   symfony: {
-    name: "Symfony",
+    name: 'Symfony',
     logo: symfony,
   },
   node: {
-    name: "Node",
+    name: 'Node',
     logo: node,
   },
 };
 
 export const librairies: Record<string, Outils> = {
   axios: {
-    name: "Axios",
+    name: 'Axios',
   },
   express: {
-    name: "Express",
+    name: 'Express',
   },
   zod: {
-    name: "Zod",
+    name: 'Zod',
   },
   apiSf: {
-    name: "Api plateform",
+    name: 'Api plateform',
   },
   flutter: {
-    name: "Flutter",
+    name: 'Flutter',
   },
 };
 
 export const outils: Record<string, Outils> = {
   docker: {
-    name: "Docker",
+    name: 'Docker',
     logo: docker,
   },
   notion: {
-    name: "Notion",
+    name: 'Notion',
     logo: notion,
   },
   gitlab: {
-    name: "GitLab",
+    name: 'GitLab',
     logo: gitlab,
   },
   github: {
-    name: "GitHub",
+    name: 'GitHub',
   },
   figma: {
-    name: "Figma",
+    name: 'Figma',
     logo: figma,
   },
   canva: {
-    name: "Canva",
+    name: 'Canva',
   },
   ai: {
-    name: "Illustrator",
+    name: 'Illustrator',
   },
   ind: {
-    name: "InDesign",
+    name: 'InDesign',
   },
   uml: {
-    name: "Draw Uml",
+    name: 'Draw Uml',
   },
   drive: {
-    name: "Suite google",
+    name: 'Suite google',
     logo: drive,
   },
 };
 
 export const languages: Record<string, Outils> = {
   ts: {
-    name: "Typescript",
+    name: 'Typescript',
     logo: ts,
   },
   js: {
-    name: "Javascript",
+    name: 'Javascript',
     logo: js,
   },
   php: {
-    name: "PHP",
+    name: 'PHP',
     logo: php,
   },
   draft: {
-    name: "Draft",
+    name: 'Draft',
   },
 };
 interface AllOutils {
@@ -118,19 +118,19 @@ interface AllOutils {
 }
 export const allOutils: AllOutils[] = [
   {
-    label: "Frameworks",
+    label: 'Frameworks',
     infos: frameworks,
   },
   {
-    label: "Languages",
+    label: 'Languages',
     infos: languages,
   },
   {
-    label: "Librairies",
+    label: 'Librairies',
     infos: librairies,
   },
   {
-    label: "Outils",
+    label: 'Outils',
     infos: outils,
   },
 ];
