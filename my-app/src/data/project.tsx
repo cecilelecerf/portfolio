@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { frameworks, languages, Outils, outils } from "./outils";
+import { frameworks, languages, librairies, Outils, outils } from "./outils";
 import { HandymoovProject } from "@/LayoutProject/HandymoovProject";
 import { UrbanGreenProject } from "@/LayoutProject/UrbanGreen";
 import { IotaProject } from "@/LayoutProject/Iota";
@@ -39,18 +39,12 @@ import spotify3 from "../assets/projects/spotify/spash screen.png"
 
 
 type Work = "Front" | "Back" | "WebDesign" | "DA" | "Marketing";
-export type AllOutilsProps = {
-  outils?: Outils[],
-  frameworks?: Outils[]
-  languages?: Outils[]
-  librairies?: Outils[]
-}
 
 export interface Project {
   title: string;
   works: Work[];
   description: ReactNode;
-  outils: AllOutilsProps
+  outils?: Partial<Record<"Outils" | "Frameworks" | "Languages" | "Librairies", Outils[]>>
   pictures?: StaticImageData[]
 }
 
@@ -60,18 +54,17 @@ export const projects: Project[] = [
     title: "",
     works: [],
     description: <></>,
-    outils: {
-    }
+
   },
   {
     title: "Iota",
     works: ["Front"],
     description: <IotaProject />,
     outils: {
-      frameworks: [frameworks.react],
-      outils: [outils.figma, outils.gitlab, outils.notion, outils.gitlab],
-      languages: [languages.ts],
-      librairies: [frameworks.zod]
+      Frameworks: [frameworks.react],
+      Outils: [outils.figma, outils.gitlab, outils.notion, outils.gitlab],
+      Languages: [languages.ts],
+      Librairies: [librairies.zod]
     },
     pictures: [iota1, iota2, iota3, iota4]
   },
@@ -80,10 +73,10 @@ export const projects: Project[] = [
     works: ["Back", "Front", "Marketing"],
     description: <HandymoovProject />,
     outils: {
-      frameworks: [frameworks.node, frameworks.rn],
-      outils: [outils.figma, outils.gitlab, outils.gitlhub, outils.docker, outils.uml, outils.drive],
-      languages: [languages.ts],
-      librairies: [frameworks.express, frameworks.axios]
+      Frameworks: [frameworks.node, frameworks.rn],
+      Outils: [outils.figma, outils.gitlab, outils.gitlhub, outils.docker, outils.uml, outils.drive],
+      Languages: [languages.ts],
+      Librairies: [librairies.express, librairies.axios]
     },
     pictures: [handymoov3, handymoov1, handymoov2, handymoov4, handymoov5]
   },
@@ -92,9 +85,9 @@ export const projects: Project[] = [
     works: ["Back"],
     description: <F1GameProject />,
     outils: {
-      frameworks: [frameworks.node],
-      outils: [outils.docker, outils.notion, outils.github, outils.uml],
-      languages: [languages.js]
+      Frameworks: [frameworks.node],
+      Outils: [outils.docker, outils.notion, outils.github, outils.uml],
+      Languages: [languages.js],
     }
   },
   {
@@ -102,7 +95,8 @@ export const projects: Project[] = [
     works: ["Marketing", "WebDesign"],
     description: <MeufDeterreProject />,
     outils: {
-      outils: [outils.figma, outils.ind, outils.notion, outils.ai, outils.drive],
+      Outils: [outils.figma, outils.ind, outils.notion, outils.ai, outils.drive],
+
     },
     pictures: [meufDeterre1, meufDeterre2, meufDeterre3]
   },
@@ -111,9 +105,10 @@ export const projects: Project[] = [
     works: ["Front"],
     description: <>En cours...</>,
     outils: {
-      frameworks: [frameworks.react],
-      outils: [outils.figma, outils.gitlab, outils.notion, outils.gitlab],
-      languages: [languages.ts]
+      Frameworks: [frameworks.react],
+      Outils: [outils.figma, outils.gitlab, outils.notion, outils.gitlab],
+      Languages: [languages.ts],
+
     }
   },
   {
@@ -121,9 +116,10 @@ export const projects: Project[] = [
     works: ["Back"],
     description: <TipsProject />,
     outils: {
-      frameworks: [frameworks.symfony, frameworks.apiSf],
-      outils: [outils.figma, outils.hub],
-      languages: [languages.php]
+      Frameworks: [frameworks.symfony, frameworks.apiSf],
+      Outils: [outils.figma, outils.hub],
+      Languages: [languages.php],
+
     }
   },
   {
@@ -131,9 +127,9 @@ export const projects: Project[] = [
     works: ["Front", "Back"],
     description: <UrbanGreenProject />,
     outils: {
-      frameworks: [frameworks.react],
-      outils: [outils.figma, outils.gitlab, outils.notion, outils.gitlab],
-      languages: [languages.ts]
+      Frameworks: [frameworks.react],
+      Outils: [outils.figma, outils.gitlab, outils.notion, outils.gitlab],
+      Languages: [languages.ts],
     }
   },
   {
@@ -141,9 +137,10 @@ export const projects: Project[] = [
     works: ["Front"],
     description: <>En cours...</>,
     outils: {
-      frameworks: [frameworks.vue],
-      outils: [outils.figma, outils.github],
-      languages: [languages.js]
+      Frameworks: [frameworks.vue],
+      Outils: [outils.figma, outils.github],
+      Languages: [languages.js],
+
     }
   },
   {
@@ -151,8 +148,9 @@ export const projects: Project[] = [
     works: ["Front", "Back"],
     description: <SihmatiProject />,
     outils: {
-      outils: [outils.figma, outils.github, outils.notion, outils.drive, outils.ind, outils.ai],
-      languages: [languages.php]
+      Outils: [outils.figma, outils.github, outils.notion, outils.drive, outils.ind, outils.ai],
+      Languages: [languages.php],
+
     },
     pictures: [sihmati3, sihmati1, sihmati2, sihmati4, sihmati5]
   },
@@ -161,9 +159,10 @@ export const projects: Project[] = [
     works: ["Front"],
     description: <SpotifyProject />,
     outils: {
-      outils: [outils.figma, outils.github],
-      languages: [languages.draft],
-      frameworks: [frameworks.flutter]
+      Outils: [outils.figma, outils.github],
+      Languages: [languages.draft],
+      Frameworks: [frameworks.flutter],
+
     },
     pictures: [spotify1, spotify2, spotify3]
 
@@ -172,7 +171,5 @@ export const projects: Project[] = [
     title: "",
     works: [],
     description: <></>,
-    outils: {
-    }
   },
 ];

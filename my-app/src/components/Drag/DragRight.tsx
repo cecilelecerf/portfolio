@@ -87,7 +87,6 @@ export const DragRight = ({ isOpen, setOpen }: { isOpen: boolean, setOpen: Dispa
                                     <Paper mx="md" key={step} mb="md" p="sm">
                                         <Center>
                                             {info.logo && (
-
                                                 <Image src={info.logo} w={75} h={75} alt={`logo ${info.name}`} fit="contain" component={NextImage} />
                                             )}
                                         </Center>

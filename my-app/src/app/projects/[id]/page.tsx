@@ -1,9 +1,9 @@
 import { TabsComponent } from "@/components/Tabs/TabsComponent";
 import { projects } from "@/data/project";
-import { Badge, Box, Card, Center, Flex, Group, Image, Paper, Space, Text, Title } from "@mantine/core";
+import { Badge, Box, Center, Flex, Group, Paper, SimpleGrid, Space, Text, Title } from "@mantine/core";
 import classes from "../../../components/Tabs/Tabs.module.css"
-import placeholder from "../../../assets/secondPlaceholder.png"
 import { PictureProject } from "@/components/PictureProject/PictureProject";
+export const thresholds = [800, 1200, 1600, 2000];
 
 export interface PageProps {
     params: Promise<{ id: number }>;
@@ -28,18 +28,17 @@ export default async function Page({ params }: PageProps) {
             <Box maw={650} my="md">{project.description}</Box>
             <Space h={50} />
             <TabsComponent outils={project.outils} />
-            <Box h={1400}></Box>
-            <Box mb="xl" bg="gray.2" p="xl" style={{ borderRadius: "5px" }}>
-                <Title order={2} fs="italic" mb="xl">Voici quelque visuel</Title>
+            <Box h={thresholds[Object.keys(project.outils ?? {}).length - 1]}></Box>
+            <Paper mb="xl" p="xl" style={{ borderRadius: "5px" }} shadow="md">
+                <Title order={2} fs="italic" mb="xl">Quelque visuel</Title>
                 <Center w="100%">
-                    <Group justify="start" w="fit-content" gap="lg">
+                    <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}  >
                         {project.pictures?.map((picture, key) =>
                             <PictureProject key={key} picture={picture} />
                         )}
-                    </Group>
-
+                    </SimpleGrid>
                 </Center>
-            </Box>
+            </Paper>
 
 
         </Box>
