@@ -10,6 +10,18 @@ import drive from '../assets/logo/drive.png';
 import ts from '../assets/logo/ts.png';
 import js from '../assets/logo/js.png';
 import php from '../assets/logo/php.png';
+import next from '../assets/logo/next.png';
+import axios from '../assets/logo/axios.png';
+import apiPlateform from '../assets/logo/apiPlateform.png';
+import dart from '../assets/logo/dart.png';
+import express from '../assets/logo/express.png';
+import flutter from '../assets/logo/flutter.png';
+import github from '../assets/logo/github.png';
+import zod from '../assets/logo/zod.png';
+import ai from '../assets/logo/ai.png';
+import canva from '../assets/logo/canva.png';
+import drawSql from '../assets/logo/drawSQL.png';
+import id from '../assets/logo/id.png';
 import { StaticImageData } from 'next/image';
 
 export type Outils = {
@@ -26,6 +38,7 @@ export const frameworks: Record<string, Outils> = {
   },
   next: {
     name: 'Next',
+    logo: next,
     often: true,
   },
   vue: {
@@ -46,21 +59,26 @@ export const frameworks: Record<string, Outils> = {
 export const librairies: Record<string, Outils> = {
   axios: {
     name: 'Axios',
+    logo: axios,
     often: true,
   },
   express: {
     name: 'Express',
+    logo: express,
     often: true,
   },
   zod: {
     name: 'Zod',
+    logo: zod,
     often: true,
   },
   apiSf: {
     name: 'Api plateform',
+    logo: apiPlateform,
   },
   flutter: {
     name: 'Flutter',
+    logo: flutter,
   },
 };
 
@@ -81,6 +99,7 @@ export const outils: Record<string, Outils> = {
   },
   github: {
     name: 'GitHub',
+    logo: github,
     often: true,
   },
   figma: {
@@ -90,16 +109,19 @@ export const outils: Record<string, Outils> = {
   },
   canva: {
     name: 'Canva',
+    logo: canva,
   },
   ai: {
     name: 'Illustrator',
+    logo: ai,
   },
   ind: {
     name: 'InDesign',
+    logo: id,
   },
   uml: {
-    name: 'Draw Uml',
-    often: true,
+    name: 'Draw Sql',
+    logo: drawSql,
   },
   drive: {
     name: 'Suite google',
@@ -123,7 +145,8 @@ export const languages: Record<string, Outils> = {
     logo: php,
   },
   draft: {
-    name: 'Draft',
+    name: 'Dart',
+    logo: dart,
   },
 };
 interface AllOutils {

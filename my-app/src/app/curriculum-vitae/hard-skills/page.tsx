@@ -21,7 +21,7 @@ export default function Page() {
             <Title order={3} fs="italic">
               {outils.label}
             </Title>
-            <Flex gap="lg" w="fit-content">
+            <Flex gap="lg" w="fit-content" wrap="wrap">
               {Object.values(outils.infos).map((value, k) => <Item item={value} key={k} />)}
             </Flex>
           </Stack>
