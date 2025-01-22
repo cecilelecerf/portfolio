@@ -1,0 +1,6 @@
+.picture {
+  transform: scaleX(-1);
+  &:hover {
+    transform: rotateY(20deg);
+  }
+}

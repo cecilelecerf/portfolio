@@ -15,15 +15,18 @@ import { StaticImageData } from 'next/image';
 export type Outils = {
   name: string;
   logo?: StaticImageData;
+  often?: boolean;
 };
 
 export const frameworks: Record<string, Outils> = {
   react: {
     name: 'React',
     logo: react,
+    often: true,
   },
   next: {
     name: 'Next',
+    often: true,
   },
   vue: {
     name: 'Vue',
@@ -36,18 +39,22 @@ export const frameworks: Record<string, Outils> = {
   node: {
     name: 'Node',
     logo: node,
+    often: true,
   },
 };
 
 export const librairies: Record<string, Outils> = {
   axios: {
     name: 'Axios',
+    often: true,
   },
   express: {
     name: 'Express',
+    often: true,
   },
   zod: {
     name: 'Zod',
+    often: true,
   },
   apiSf: {
     name: 'Api plateform',
@@ -61,10 +68,12 @@ export const outils: Record<string, Outils> = {
   docker: {
     name: 'Docker',
     logo: docker,
+    often: true,
   },
   notion: {
     name: 'Notion',
     logo: notion,
+    often: true,
   },
   gitlab: {
     name: 'GitLab',
@@ -72,10 +81,12 @@ export const outils: Record<string, Outils> = {
   },
   github: {
     name: 'GitHub',
+    often: true,
   },
   figma: {
     name: 'Figma',
     logo: figma,
+    often: true,
   },
   canva: {
     name: 'Canva',
@@ -88,10 +99,12 @@ export const outils: Record<string, Outils> = {
   },
   uml: {
     name: 'Draw Uml',
+    often: true,
   },
   drive: {
     name: 'Suite google',
     logo: drive,
+    often: true,
   },
 };
 
@@ -99,6 +112,7 @@ export const languages: Record<string, Outils> = {
   ts: {
     name: 'Typescript',
     logo: ts,
+    often: true,
   },
   js: {
     name: 'Javascript',

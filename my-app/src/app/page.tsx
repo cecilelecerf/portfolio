@@ -3,12 +3,13 @@ import { Box, Button, Flex, Stack, Text, Title } from '@mantine/core';
 import Link from 'next/link';
 import { LogoHomePage } from '@/components/LogoHomePage/LogoHomePage';
 import { useMediaQuery } from '@mantine/hooks';
+import { GUTTER } from '@/components/const';
 
 export default function Home() {
   const isSmallScreen = useMediaQuery('(max-width: 768px)'); // Ajustez selon vos besoins
 
   return (
-    <Box mx="xl" h="100%">
+    <Box mx={GUTTER} h="100%">
       <Flex
         gap="xl"
         justify="space-between"

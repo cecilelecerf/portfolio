@@ -1,12 +1,12 @@
 'use client';
 import { useState } from 'react';
-import { Box, Flex, Image, Stack, Text } from '@mantine/core';
-import NextImage from 'next/image';
-import placeholder from '../../assets/placeholder.svg';
+import { Box, Button, Flex, Image, Stack, Text } from '@mantine/core';
 import { DragLeft } from '@/components/Drag/DragLeft';
-import { DragRight } from '@/components/Drag/DragRight';
 import { useMediaQuery } from '@mantine/hooks';
 import { AccordionCV } from '@/components/Accordion/Accordion';
+import { PictureMe } from '@/components/CV/PictureMe';
+import { DragRight } from '@/components/Drag/DragRight';
+import Link from 'next/link';
 
 export default function Page() {
   const [open, setOpen] = useState<'left' | 'right' | null>(null);
@@ -28,15 +28,7 @@ export default function Page() {
           direction={isSmallScreen ? 'column' : 'row'}
           mx="xl"
         >
-          <Image
-            src={placeholder}
-            alt=""
-            bg="gray.1"
-            w={250}
-            h={250}
-            fit="contain"
-            component={NextImage}
-          />
+          <PictureMe />
           <Box maw={550}>
             <Text fw="bold" fs="italic" size="xl">
               Une petite présentation s{"'"}impose,
@@ -45,12 +37,19 @@ export default function Page() {
               Alors voilà : Cécile LECERF, Développeuse web depuis maintenant 4
               ans.
             </Text>
+            <Flex>
+              <Link href="./curriculum-vitae/hard-skills">
+                <Button>Découvrir mes hard skills</Button>
+              </Link>
+            </Flex>
           </Box>
         </Flex>
         {isSmallScreen && <AccordionCV />}
       </Stack>
       {!isSmallScreen && (
-        <DragRight isOpen={open === 'right'} setOpen={setOpen} />
+        <>
+          <DragRight isOpen={open === 'right'} setOpen={setOpen} />
+        </>
       )}
     </Box>
   );

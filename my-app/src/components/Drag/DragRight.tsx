@@ -6,14 +6,11 @@ import {
   Text,
   Center,
   Image,
-  Tabs,
-  TabsList,
-  TabsTab,
-  TabsPanel,
+  Box,
+  FloatingIndicator,
+  Title,
 } from '@mantine/core';
-import { allOutils } from '@/data/outils';
-import NextImage from 'next/image';
-
+import classes from "../Tabs/Tabs.module.css"
 export const DragRight = ({
   isOpen,
   setOpen,
@@ -24,7 +21,15 @@ export const DragRight = ({
   const [isDragging, setIsDragging] = useState(false);
   const [start, setStart] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-
+  const [rootRef, setRootRef] = useState<HTMLDivElement | null>(null);
+  const [value, setValue] = useState<string | null>('0');
+  const [controlsRefs, setControlsRefs] = useState<
+    Record<string, HTMLButtonElement | null>
+  >({});
+  const setControlRef = (val: string) => (node: HTMLButtonElement) => {
+    controlsRefs[val] = node;
+    setControlsRefs(controlsRefs);
+  };
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
     setStart(e.clientX);
@@ -78,53 +83,24 @@ export const DragRight = ({
       }}
       onMouseDown={handleMouseDown}
     >
-      <Text onClick={() => setOpen((is) => (is === 'right' ? null : 'right'))}>
-        {isOpen ? 'Mes compétences -> ' : '<- Mes compétences'}
+      <Text onClick={() => setOpen((is) => (is === 'right' ? null : 'right'))} bg="white" style={{ borderRadius: "var(--mantine-radius-xl)" }} p="xs" >
+        {isOpen ? 'Mes softs skills -> ' : '<- Mes softs skills'}
       </Text>
       <Paper
         shadow="xl"
         p="xl"
-        pr={200}
+        pl={200}
         w={1100}
         h={550}
-        bg={isDragging ? 'gray.1' : 'gray.0'}
         style={{
           borderRadius: '10px 0px 0px 10px',
           overflowY: 'scroll',
         }}
+        pos="relative"
       >
-        <Tabs defaultValue="Frameworks" orientation="vertical">
-          <TabsList>
-            {allOutils.map((outil, i) => (
-              <TabsTab value={outil.label} key={i}>
-                {outil.label}
-              </TabsTab>
-            ))}
-          </TabsList>
-          {allOutils.map((outil, key) => (
-            <TabsPanel value={outil.label} key={key}>
-              <Flex key={key} wrap="wrap">
-                {Object.values(outil.infos).map((info, step) => (
-                  <Paper mx="md" key={step} mb="md" p="sm">
-                    <Center>
-                      {info.logo && (
-                        <Image
-                          src={info.logo}
-                          w={75}
-                          h={75}
-                          alt={`logo ${info.name}`}
-                          fit="contain"
-                          component={NextImage}
-                        />
-                      )}
-                    </Center>
-                    <Text ta="center">{info.name}</Text>
-                  </Paper>
-                ))}
-              </Flex>
-            </TabsPanel>
-          ))}
-        </Tabs>
+        <Box pos="absolute" top={0} left={0} w={60} h="100%" bg="blue.1" />
+        <Title order={3}>Soft Skills</Title>
+        <Text maw={600}>Rigoureuse et toujours animée par une grande motivation, je m'efforce de partager les informations de manière claire et constructive, favorisant ainsi une collaboration efficace au sein de l'équipe.</Text>
       </Paper>
       <Text
         onClick={() => setOpen((is) => (is === 'right' ? null : 'right'))}
@@ -136,3 +112,5 @@ export const DragRight = ({
     </Stack>
   );
 };
+
+

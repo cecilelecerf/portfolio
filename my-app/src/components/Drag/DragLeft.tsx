@@ -1,5 +1,5 @@
 import { useState, useRef, Dispatch, SetStateAction } from 'react';
-import { Paper, Title, Flex, Stack, Text } from '@mantine/core';
+import { Paper, Title, Flex, Stack, Text, Box, useMantineTheme } from '@mantine/core';
 import { Company } from '../Timeline/Company';
 import { School } from '../Timeline/School';
 
@@ -50,6 +50,7 @@ export const DragLeft = ({
       window.removeEventListener('mouseup', handleMouseUp);
     }
   }
+  const theme = useMantineTheme()
 
   return (
     <Stack
@@ -76,11 +77,16 @@ export const DragLeft = ({
         pr={200}
         h={550}
         w={1100}
-        bg={isDragging ? 'gray.1' : 'gray.0'}
         style={{
           borderRadius: '0px 10px 10px 0px',
           overflowY: 'scroll',
+          borderRightStyle: "solid",
+          borderRightWidth: "60px",
+          borderRightColor: theme.colors.pink[1]
+
+
         }}
+        pos='relative'
       >
         <Flex align="center" mb={100} gap="lg">
           <Title order={3} w={150}>

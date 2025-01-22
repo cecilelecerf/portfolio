@@ -1,17 +1,15 @@
 import { Project } from '@/data/project';
-import { Badge, Box, Flex, Image, Stack, Text } from '@mantine/core';
-import NextImage from 'next/image';
-import placeholder from '../../assets/secondPlaceholder.png';
+import { Badge, Box, Flex, Stack, StackProps, Text } from '@mantine/core';
 import { useMantineTheme } from '@mantine/core';
 import classes from './Card.module.css';
-import { useHover } from '@mantine/hooks';
 import Link from 'next/link';
 
 export const Card = ({
   project,
   inverted = false,
   step,
-}: {
+  ...props
+}: StackProps & {
   project: Project;
   inverted?: boolean;
   step: number;
@@ -25,26 +23,16 @@ export const Card = ({
     theme.colors.violet[3],
   ];
   const backgroundColor = colors[(step + (inverted ? 0 : 3)) % colors.length];
-  const { hovered, ref } = useHover();
 
   return (
     <Link href={`/projects/${step}`}>
       <Stack
         p="sm"
         className={classes.root}
-        ref={ref}
         w={{ base: 200, sm: 250 }}
+        {...props}
       >
-        <Image
-          src={project.pictures?.[0] ? project.pictures[0] : placeholder}
-          alt="Placeholder"
-          component={NextImage}
-          className={classes.bg}
-          style={{
-            transform: hovered ? 'scale(1.2)' : 'none',
-            transition: 'transform 0.3s ease, border-color 0.3s ease',
-          }}
-        />
+
         <Box
           bg={backgroundColor}
           className={`${classes.bg} ${classes.bgColor}`}

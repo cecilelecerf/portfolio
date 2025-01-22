@@ -8,11 +8,11 @@ export const Company = () => {
       bulletSize={45}
       lineWidth={2}
       maw={700}
-      color="yellow"
+      color="violet.1"
     >
       {compagny.map((comp, key) => (
         <TimelineItem
-          bullet={<Text>{comp.year}</Text>}
+          bullet={<Text c="dark">{comp.year}</Text>}
           title={comp.label}
           key={key}
         >
