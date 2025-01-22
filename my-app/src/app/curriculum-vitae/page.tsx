@@ -41,6 +41,7 @@ export default function Page() {
               <Link href="./curriculum-vitae/hard-skills">
                 <Button>Découvrir mes hard skills</Button>
               </Link>
+              <Button ml="md">Télécharger mon cv</Button>
             </Flex>
           </Box>
         </Flex>

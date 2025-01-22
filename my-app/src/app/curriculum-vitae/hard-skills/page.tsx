@@ -2,12 +2,11 @@
 import { Box, Center, Flex, Image, Stack, Text, Title } from '@mantine/core';
 import { allOutils, Outils } from '@/data/outils';
 import NextImage from 'next/image';
-import { GUTTER } from '@/components/const';
 
 export default function Page() {
 
   return (
-    <Box mx={GUTTER}>
+    <Box >
       <Flex justify="space-between">
         <Title order={2} mb="xl">Hard Skills </Title>
         <Center>

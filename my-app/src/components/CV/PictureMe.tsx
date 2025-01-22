@@ -7,7 +7,7 @@ export const PictureMe = () => (
         src={pictureMe}
         alt=""
         w={300}
-        h={350}
+        h={200}
         fit="contain"
         component={NextImage}
         className={classes.picture}

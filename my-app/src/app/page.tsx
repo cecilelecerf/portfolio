@@ -3,13 +3,12 @@ import { Box, Button, Flex, Stack, Text, Title } from '@mantine/core';
 import Link from 'next/link';
 import { LogoHomePage } from '@/components/LogoHomePage/LogoHomePage';
 import { useMediaQuery } from '@mantine/hooks';
-import { GUTTER } from '@/components/const';
 
 export default function Home() {
   const isSmallScreen = useMediaQuery('(max-width: 768px)'); // Ajustez selon vos besoins
 
   return (
-    <Box mx={GUTTER} h="100%">
+    <Box h="100%">
       <Flex
         gap="xl"
         justify="space-between"
@@ -21,10 +20,7 @@ export default function Home() {
             Hello !
           </Title>
           <Text size="lg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus, aliquam corrupti. Sit facilis ea eius autem
-            consequatur necessitatibus ducimus libero possimus consectetur! Sit
-            ad sunt hic animi non perferendis cupiditate.
+            Bienvenue sur mon portfolio ! Développeuse web depuis 4 ans, je combine rigueur, créativité et adaptabilité pour transformer des idées en projets concrets. À travers une communication fluide et une organisation méthodique, je m’efforce de collaborer efficacement en équipe pour relever chaque défi avec professionnalisme. Découvrez mes réalisations et projets !
           </Text>
           <Flex gap="md">
             <Link href="/curriculum-vitae">

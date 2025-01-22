@@ -2,7 +2,6 @@
 import { Burger, Drawer, Flex, Stack, Text, Title } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import Link from 'next/link';
-import { GUTTER } from './const';
 
 export const Header = () => {
   const [opened, { toggle, close }] = useDisclosure();
@@ -10,7 +9,7 @@ export const Header = () => {
 
   return (
     <header>
-      <Flex justify="space-between" m="xl" align="center" mb={100} mx={GUTTER}>
+      <Flex justify="space-between" my="xl" align="center" mb={100} >
         <Link href="/">
           <Title>Cécile LECERF</Title>
         </Link>

@@ -1,4 +1,4 @@
-import { Box, BoxProps, Flex, } from '@mantine/core';
+import { Box, BoxProps, Flex, SimpleGrid, } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { Card } from '../Card/Card';
 import { projects } from '@/data/project';
@@ -30,15 +30,15 @@ const projectProps: BoxProps[] = [
   },
 ];
 export const LogoHomePage = () => {
-  const isSmallScreen = useMediaQuery('(max-width: 768px)');
+  const isSmallScreen = useMediaQuery('(max-width: 800px)');
   if (isSmallScreen)
     return (
-      <Flex justify="center" w="100%" gap="xl" wrap="wrap" mt="xl">
+      <SimpleGrid cols={1} w="100%" mt="xl">
         {projectProps.map((project, index) => (
-          <Card key={index} project={projects[index + 1]} step={index + 1} pos="absolute"
-            {...project} />
+          <Card key={index} project={projects[index + 1]} step={index + 1}
+          />
         ))}
-      </Flex>
+      </SimpleGrid>
     );
   else
     return (

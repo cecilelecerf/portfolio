@@ -32,37 +32,9 @@ export const AccordionCV = () => {
   return (
     <Accordion w="100%" px="xl">
       <AccordionItem value="0">
-        <AccordionControl>Hard Skill</AccordionControl>
+        <AccordionControl>Soft Skills</AccordionControl>
         <AccordionPanel>
-          <Tabs variant="none" value={value} onChange={setValue}>
-            <Tabs.List ref={setRootRef} className={classes.list}>
-              {Object.entries(allOutils).map(([key, outil], i) => (
-                <TabsTab
-                  value={key}
-                  key={i}
-                  ref={setControlRef(i.toString())}
-                  onClick={() => setValue(i.toString())}
-                  className={classes.tab}
-                >
-                  {outil.label}
-                </TabsTab>
-              ))}
-              <FloatingIndicator
-                target={value ? controlsRefs[value] : null}
-                parent={rootRef}
-                className={classes.indicator}
-              />
-            </Tabs.List>
-            {Object.values(allOutils).map((outil, i) => (
-              <Tabs.Panel value={i.toString()} key={i}>
-                <SimpleGrid cols={3} key={i}>
-                  {Object.values(outil.infos).map((value, i) => (
-                    <Item key={i} item={value} />
-                  ))}
-                </SimpleGrid>
-              </Tabs.Panel>
-            ))}
-          </Tabs>
+          <Text>Rigoureuse et toujours animée par une grande motivation, je m'efforce de partager les informations de manière claire et constructive, favorisant ainsi une collaboration efficace au sein de l'équipe.</Text>
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem value="1">

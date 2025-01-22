@@ -39,7 +39,10 @@ export const Scroll = ({ inverted }: { inverted?: boolean }) => {
         className={classes.root}
       >
         {projects.map((project, i) => (
-          <Card project={project} key={i} step={i} />
+          <Box w={250} key={i}>
+
+            <Card project={project} step={i} />
+          </Box>
         ))}
       </Flex>
     </Box>

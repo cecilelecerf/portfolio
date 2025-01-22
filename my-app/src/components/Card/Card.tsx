@@ -29,7 +29,8 @@ export const Card = ({
       <Stack
         p="sm"
         className={classes.root}
-        w={{ base: 200, sm: 250 }}
+        w="100%"
+        // w={{ base: 200, sm: 250 }}
         {...props}
       >
 

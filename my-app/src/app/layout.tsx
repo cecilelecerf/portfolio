@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import '@mantine/core/styles.css';
 import {
+  Box,
   ColorSchemeScript,
   mantineHtmlProps,
   MantineProvider,
@@ -27,9 +28,12 @@ export default function RootLayout({
       </head>
 
       <body style={{}}>
-        <MantineProvider theme={theme}>
-          <Header />
-          <main>{children}</main>
+        <MantineProvider theme={theme} >
+          <Box px={{ base: 20, sm: 100 }}>
+
+            <Header />
+            <main>{children}</main>
+          </Box>
         </MantineProvider>
       </body>
     </html>
