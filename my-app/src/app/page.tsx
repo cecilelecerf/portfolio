@@ -1,7 +1,7 @@
 import { BackgroundImage, Box, Button, Text, Title } from '@mantine/core';
 import bg from '../assets/office.jpg';
 import Link from 'next/link';
-import filter from "../components/Filter.module.css"
+import filter from '../components/Filter.module.css';
 export default function Home() {
   return (
     <BackgroundImage
@@ -22,7 +22,7 @@ export default function Home() {
         <Title fw="bold">Salut, moi c&apos;est Cécile</Title>
         <Text fw="bold">Bienvenue sur mon portfolio</Text>
         <Link href="/projects">
-          <Button mt="lg" variant='outline' color='white'>
+          <Button mt="lg" variant="outline" color="white">
             Découvrir mes projets
           </Button>
         </Link>

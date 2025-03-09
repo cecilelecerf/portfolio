@@ -30,16 +30,22 @@ export const Header = () => {
           </Link>
         </Flex>
         <Flex gap="md" align="center">
-          <Link href="https://github.com/cecilelecerf" className={classes.iconLink} target='_blank'>
+          <Link
+            href="https://github.com/cecilelecerf"
+            className={classes.iconLink}
+            target="_blank"
+          >
             <IconBrandGithubFilled size="100%" />
           </Link>
-          <Link href="https://www.linkedin.com/in/c%C3%A9cile-lecerf-ab1736220/" className={classes.iconLink} target='_blank'>
+          <Link
+            href="https://www.linkedin.com/in/c%C3%A9cile-lecerf-ab1736220/"
+            className={classes.iconLink}
+            target="_blank"
+          >
             <IconBrandLinkedinFilled size="100%" />
           </Link>
           <a href="/CV - Cécile LECERF.pdf" download>
-            <Button leftSection={<IconDownload />}>
-              Télécharger mon CV
-            </Button>
+            <Button leftSection={<IconDownload />}>Télécharger mon CV</Button>
           </a>
         </Flex>
       </Flex>
@@ -68,15 +74,26 @@ export const Header = () => {
               Parcours
             </Link>
             <Flex gap="sm">
-              <Link href="https://github.com/cecilelecerf" className={classes.iconLink} target="_blank">
+              <Link
+                href="https://github.com/cecilelecerf"
+                className={classes.iconLink}
+                target="_blank"
+              >
                 <IconBrandGithubFilled size="100%" />
               </Link>
-              <Link href="https://www.linkedin.com/in/c%C3%A9cile-lecerf-ab1736220/" className={classes.iconLink} target='_blank'>
+              <Link
+                href="https://www.linkedin.com/in/c%C3%A9cile-lecerf-ab1736220/"
+                className={classes.iconLink}
+                target="_blank"
+              >
                 <IconBrandLinkedinFilled size="100%" />
               </Link>
             </Flex>
             <a href="/CV - Cécile LECERF.pdf" download>
-              <Button className={classes.cvButton} leftSection={<IconDownload />}>
+              <Button
+                className={classes.cvButton}
+                leftSection={<IconDownload />}
+              >
                 Télécharger mon CV
               </Button>
             </a>

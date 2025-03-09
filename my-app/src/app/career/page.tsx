@@ -37,9 +37,9 @@ export default function Page() {
           </Title>
           <Text fz="lg">
             Je suis Cécile LECERF, développeuse web depuis 4 ans. Ma passion
-            pour l&apos;apprentissage et la découverte est plus vive que jamais, et
-            c&apos;est pourquoi je suis à la recherche d&apos;une nouvelle alternance pour
-            ma cinquième et dernière année.
+            pour l&apos;apprentissage et la découverte est plus vive que jamais,
+            et c&apos;est pourquoi je suis à la recherche d&apos;une nouvelle
+            alternance pour ma cinquième et dernière année.
           </Text>
           <Flex gap="md">
             <Link href="/career#company">

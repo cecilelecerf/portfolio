@@ -11,8 +11,8 @@ import {
 import { allOutils, Outils } from '@/data/outils';
 import NextImage from 'next/image';
 import bg from '../../assets/dev.jpg';
-import classes from "../../styles/skills.module.css";
-import filter from "../../components/Filter.module.css"
+import classes from '../../styles/skills.module.css';
+import filter from '../../components/Filter.module.css';
 
 export default function Page() {
   return (
@@ -22,7 +22,9 @@ export default function Page() {
         className={`${classes.bgImage} ${filter.filter}`}
       >
         <Box className={classes.textBox}>
-          <Title className={classes.title}>Maîtrise des technologies modernes et polyvalence</Title>
+          <Title className={classes.title}>
+            Maîtrise des technologies modernes et polyvalence
+          </Title>
           <Text>
             Depuis mes débuts dans le développement web, j’ai acquis une solide
             maîtrise des technologies front-end et back-end
@@ -31,10 +33,7 @@ export default function Page() {
       </BackgroundImage>
       <Stack className={classes.stack}>
         {allOutils.map((outils, k) => (
-          <Stack
-            key={k}
-            className={classes.outilsStack}
-          >
+          <Stack key={k} className={classes.outilsStack}>
             <Title order={2} className={classes.outilsTitle}>
               {outils.label}
             </Title>
