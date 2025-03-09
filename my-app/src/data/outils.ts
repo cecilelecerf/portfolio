@@ -80,6 +80,11 @@ export const librairies: Record<string, Outils> = {
     name: 'Flutter',
     logo: flutter,
   },
+  mantine: {
+    name: 'Mantine',
+    logo: flutter,
+    often: true,
+  },
 };
 
 export const outils: Record<string, Outils> = {

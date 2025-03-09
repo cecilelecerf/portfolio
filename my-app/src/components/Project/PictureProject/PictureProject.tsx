@@ -16,24 +16,27 @@ export const PictureProject = ({ picture }: { picture: StaticImageData }) => {
           alt=""
           component={NextImage}
           fit="contain"
+          mah={700}
           h="fit-content"
         />
       </Modal>
 
-      <Paper
+
+      <Image
+        src={picture}
+        onClick={open}
         ref={ref}
-        h={300}
         w="100%"
-        shadow="lg"
+        h={300}
+        alt=""
+        radius="xl"
+        // fit="contain"
+        component={NextImage}
         style={{
           overflow: 'hidden',
           transform: hovered ? `translateY(-20px)` : 'none',
           transition: 'transform 0.3s ease',
-        }}
-        onClick={open}
-      >
-        <Image src={picture} w="100%" h="100%" alt="" component={NextImage} />
-      </Paper>
+        }} />
     </>
   );
 };

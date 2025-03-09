@@ -40,7 +40,6 @@ export const Scroll = ({ inverted }: { inverted?: boolean }) => {
       >
         {projects.map((project, i) => (
           <Box w={250} key={i}>
-
             <Card project={project} step={i} />
           </Box>
         ))}

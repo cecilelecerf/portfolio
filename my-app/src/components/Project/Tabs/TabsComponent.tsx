@@ -27,7 +27,7 @@ export const TabsComponent = ({ outils }: { outils: Project['outils'] }) => {
     setControlsRefs(controlsRefs);
   };
   const [scroll, scrollTo] = useWindowScroll();
-  const thresholds = [800, 1200, 1600, 2000];
+  const thresholds = [900, 1300, 1700, 2100];
 
   const [isSticky, setIsSticky] = useState(true);
   const stickyLimit = thresholds[3];

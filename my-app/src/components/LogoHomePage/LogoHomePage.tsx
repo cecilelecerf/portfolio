@@ -1,6 +1,6 @@
 import { Box, BoxProps, Flex, SimpleGrid, } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { Card } from '../Card/Card';
+import { Card } from '../Project/Card/Card';
 import { projects } from '@/data/project';
 const projectProps: BoxProps[] = [
   {

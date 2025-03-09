@@ -6,10 +6,11 @@ export const PictureMe = () => (
     <Image
         src={pictureMe}
         alt=""
-        w={300}
-        h={200}
+        w={400}
+        h={300}
         fit="contain"
         component={NextImage}
         className={classes.picture}
+        display={{ base: "none", sm: "block" }}
     />
 )

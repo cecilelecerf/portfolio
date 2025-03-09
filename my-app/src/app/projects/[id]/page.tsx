@@ -1,22 +1,15 @@
-import { TabsComponent } from '@/components/Tabs/TabsComponent';
+import { TabsComponent } from '@/components/Project/Tabs/TabsComponent';
 import { projects } from '@/data/project';
 import {
-  Badge,
   Box,
-  Card,
   Center,
-  Flex,
-  Paper,
   SimpleGrid,
   Space,
-  Stack,
   Text,
   Title,
 } from '@mantine/core';
-import classes from '../../../components/Tabs/Tabs.module.css';
-import { PictureProject } from '@/components/PictureProject/PictureProject';
-import { useMediaQuery } from '@mantine/hooks';
-import { SingleProject } from '@/components/SingleProject';
+import { PictureProject } from '@/components/Project/PictureProject/PictureProject';
+import { SingleProject } from '@/components/Project/SimpleProject/SingleProject';
 
 export interface PageProps {
   params: Promise<{ id: number }>;
@@ -39,18 +32,18 @@ export default async function Page({ params }: PageProps) {
       <Space h={50} />
       <TabsComponent outils={project.outils} />
       <Box h={thresholds[Object.keys(project.outils ?? {}).length - 1]}></Box>
-      <Paper mb="xl" p="xl" style={{ borderRadius: '5px' }} shadow="md">
+      <Box>
         <Title order={2} fs="italic" mb="xl">
           Quelque visuel
         </Title>
         <Center w="100%">
-          <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
+          <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}>
             {project.pictures?.map((picture, key) => (
               <PictureProject key={key} picture={picture} />
             ))}
           </SimpleGrid>
         </Center>
-      </Paper>
+      </Box>
     </Box>
   );
 }

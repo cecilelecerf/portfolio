@@ -18,8 +18,10 @@ export const theme = createTheme({
   components: {
     Button: Button.extend({
       defaultProps: {
-        variant: 'outline', // Variante par défaut pour tous les boutons
-        color: 'black',
+        radius: 'xl',
+        variant: 'light',
+        // variant: 'outline', // Variante par défaut pour tous les boutons
+        // color: 'black',
       },
     }),
   },

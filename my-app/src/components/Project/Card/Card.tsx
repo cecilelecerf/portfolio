@@ -1,5 +1,5 @@
 import { Project } from '@/data/project';
-import { Badge, Box, Flex, Stack, StackProps, Text } from '@mantine/core';
+import { Badge, Box, Flex, Paper, Stack, StackProps, Text } from '@mantine/core';
 import { useMantineTheme } from '@mantine/core';
 import classes from './Card.module.css';
 import Link from 'next/link';
@@ -16,11 +16,11 @@ export const Card = ({
 }) => {
   const theme = useMantineTheme();
   const colors = [
-    theme.colors.pink[3],
-    theme.colors.yellow[3],
-    theme.colors.blue[3],
-    theme.colors.red[3],
-    theme.colors.violet[3],
+    theme.colors.pink[2],
+    theme.colors.yellow[2],
+    theme.colors.blue[2],
+    theme.colors.red[2],
+    theme.colors.violet[2],
   ];
   const backgroundColor = colors[(step + (inverted ? 0 : 3)) % colors.length];
 
@@ -28,19 +28,16 @@ export const Card = ({
     <Link href={`/projects/${step}`}>
       <Stack
         p="sm"
-        className={classes.root}
         w="100%"
-        // w={{ base: 200, sm: 250 }}
+        bg={backgroundColor}
+        className={classes.root}
+        style={(theme) => ({ borderRadius: theme.radius.lg })}
         {...props}
       >
 
-        <Box
-          bg={backgroundColor}
-          className={`${classes.bg} ${classes.bgColor}`}
-        />
 
         {/* Badges */}
-        <Flex gap="sm">
+        <Flex gap="sm" >
           {project.works.slice(0, 3).map((w, i) => (
             <Badge
               key={i}

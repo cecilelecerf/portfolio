@@ -5,11 +5,9 @@
   transition: position 0.3s ease;
 }
 
-.indicator {
-  background-color: var(--mantine-color-white);
-  border-radius: var(--mantine-radius-md);
-  border: 1px solid var(--mantine-color-gray-2);
-  box-shadow: var(--mantine-shadow-sm);
+.indicator { 
+  border-radius: var(--mantine-radius-xl);
+  border: 1px solid var(--mantine-color-gray-3); 
 }
 
 .tab {

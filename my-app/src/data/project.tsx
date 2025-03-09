@@ -14,15 +14,16 @@ import iota1 from '../assets/projects/iotaProject/TRIVARUS_03_2_1.svg';
 import iota2 from '../assets/projects/iotaProject/harcelement.png';
 import iota3 from '../assets/projects/iotaProject/messenger.png';
 import iota4 from '../assets/projects/iotaProject/step3.png';
+import iota5 from '../assets/projects/iotaProject/cover.png';
 
 import handymoov1 from '../assets/projects/handymoovProject/la.png';
 import handymoov2 from '../assets/projects/handymoovProject/Capture-2025-01-19-224105.png';
 import handymoov3 from '../assets/projects/handymoovProject/landing.png';
-import handymoov4 from '../assets/projects/handymoovProject/Contenu Google Drive.png';
+import handymoov4 from '../assets/projects/handymoovProject/people.png';
 import handymoov5 from '../assets/projects/handymoovProject/Logo DA.png';
 
 import meufDeterre1 from '../assets/projects/meufDeterre/Accueil.png';
-import meufDeterre2 from '../assets/projects/meufDeterre/Image depuis Mon Drive.png';
+import meufDeterre2 from '../assets/projects/meufDeterre/ytb.png';
 import meufDeterre3 from '../assets/projects/meufDeterre/Logo from Google Drive.png';
 
 import sihmati1 from '../assets/projects/sihmati/Maquette Desktop - A propos.png';
@@ -34,6 +35,7 @@ import sihmati5 from '../assets/projects/sihmati/yoga 1.png';
 import spotify1 from '../assets/projects/spotify/lolo.png';
 import spotify2 from '../assets/projects/spotify/Liste artiste.png';
 import spotify3 from '../assets/projects/spotify/spash screen.png';
+import { AlphacorpProject } from '@/LayoutProject/Alphacorp';
 
 type Work = 'Front' | 'Back' | 'WebDesign' | 'DA' | 'Marketing';
 
@@ -47,7 +49,7 @@ export interface Project {
     me: ReactNode
     more?: ReactNode,
     infos: {
-      contexte: "Scolaire" | "Scolaire cas client" | "Profesionnel"
+      contexte: "Scolaire" | "Scolaire - cas client" | "Profesionnel"
       timing: string
       numberOfPeople: number
     }
@@ -83,7 +85,7 @@ export const projects: Project[] = [
       Languages: [languages.ts],
       Librairies: [librairies.zod],
     },
-    pictures: [iota1, iota2, iota3, iota4],
+    pictures: [iota5, iota1, iota2, iota3, iota4],
   },
   {
     title: 'Handymoov',
@@ -102,7 +104,7 @@ export const projects: Project[] = [
       Languages: [languages.ts],
       Librairies: [librairies.express, librairies.axios],
     },
-    pictures: [handymoov3, handymoov1, handymoov2, handymoov4, handymoov5],
+    pictures: [handymoov4, handymoov3, handymoov1, handymoov2, handymoov5],
   },
   {
     title: 'F1 Game',
@@ -127,21 +129,12 @@ export const projects: Project[] = [
         outils.drive,
       ],
     },
-    pictures: [meufDeterre1, meufDeterre2, meufDeterre3],
+    pictures: [meufDeterre2, meufDeterre1, meufDeterre3],
   },
   {
     title: 'Alpha corp',
     works: ['Front'],
-    layout: {
-      what: <>En cours de rédaction...</>,
-      why: "",
-      me: "",
-      infos: {
-        contexte: "Profesionnel",
-        timing: "",
-        numberOfPeople: 0
-      }
-    },
+    layout: AlphacorpProject,
     outils: {
       Frameworks: [frameworks.react],
       Outils: [outils.figma, outils.gitlab, outils.notion, outils.gitlab],
@@ -149,7 +142,7 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Tips',
+    title: 'i-Tips',
     works: ['Back'],
     layout: TipsProject,
     outils: {
@@ -202,7 +195,7 @@ export const projects: Project[] = [
       ],
       Languages: [languages.php],
     },
-    pictures: [sihmati3, sihmati1, sihmati2, sihmati4, sihmati5],
+    pictures: [sihmati4, sihmati3, sihmati1, sihmati2, sihmati5],
   },
   {
     title: 'Trouve ton concert',
@@ -213,7 +206,7 @@ export const projects: Project[] = [
       Languages: [languages.draft],
       Frameworks: [frameworks.flutter],
     },
-    pictures: [spotify1, spotify2, spotify3],
+    pictures: [spotify1, spotify3, spotify2],
   },
   {
     title: '',

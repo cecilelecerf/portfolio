@@ -2,10 +2,10 @@ import { Timeline, Text, TimelineItem } from '@mantine/core';
 
 export const School = () => {
   return (
-    <Timeline active={0} bulletSize={45} lineWidth={2} color="indigo.1">
+    <Timeline active={1} bulletSize={45} lineWidth={2} color="violet.2">
       <TimelineItem
-        bullet={<Text c="dark">2021</Text>}
-        title="Bachelor concepteur développeur d'application"
+        bullet={<Text fw="bold">2021</Text>}
+        title="Bachelor Concepteur Développeur d'Application (CDA)"
       >
         <Text c="dimmed" size="sm">
           My Digital School
@@ -21,7 +21,7 @@ export const School = () => {
       </TimelineItem>
 
       <TimelineItem
-        bullet={<Text>2024</Text>}
+        bullet={<Text fw="bold">2024</Text>}
         title="Mastère en ingénieurie du web"
       >
         <Text c="dimmed" size="sm">

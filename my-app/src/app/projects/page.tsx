@@ -1,4 +1,4 @@
-import { Scroll } from '../../components/Scroll/Scroll';
+import { Scroll } from '../../components/Project/Scroll/Scroll';
 import { Box, Stack, Title } from '@mantine/core';
 
 export default function Projects() {
