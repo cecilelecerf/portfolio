@@ -29,21 +29,19 @@ export const Scroll = ({ inverted }: { inverted?: boolean }) => {
   const [scroll, setScroll] = useState(0);
 
   return (
-    <Box>
-      <Flex
-        gap="xl"
-        style={{
-          transform: `translateX(-${scroll + (inverted ? 30 : 120)}px)`,
-          willChange: 'transform',
-        }}
-        className={classes.root}
-      >
-        {projects.map((project, i) => (
-          <Box w={250} key={i}>
-            <Card project={project} step={i} />
-          </Box>
-        ))}
-      </Flex>
-    </Box>
+    <Flex
+      gap="xl"
+      style={{
+        transform: `translateX(-${scroll + (inverted ? 30 : 120)}px)`,
+        willChange: 'transform',
+      }}
+      className={classes.root}
+    >
+      {projects.map((project, i) => (
+        <Box w={250} key={i}>
+          <Card project={project} step={i} />
+        </Box>
+      ))}
+    </Flex>
   );
 };

@@ -1,0 +1,62 @@
+.bgImage {
+  width: 100%;
+  height: 80vh;
+  border-radius: var(--mantine-radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--mantine-spacing-xl);
+}
+
+.textBox {
+  text-align: center;
+  z-index: 3;
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+}
+
+ 
+
+.stack {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: var(--mantine-spacing-xl);
+  gap: var(--mantine-spacing-xl);
+  width: 100%;
+}
+
+.outilsStack {
+  border-bottom: 1px solid black;
+  padding-bottom: var(--mantine-spacing-xl);
+  width: 100%;
+  align-items: center;
+}
+
+.outilsTitle {
+  text-align: center;
+}
+
+.flex {
+  gap: var(--mantine-spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.itemStack {
+  margin-left: var(--mantine-spacing-md);
+  margin-right: var(--mantine-spacing-md);
+  gap: var(--mantine-spacing-lg);
+}
+
+.itemLogo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.itemName {
+  text-align: center;
+}

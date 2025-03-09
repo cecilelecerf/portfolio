@@ -1,6 +1,56 @@
+.header {
+  width: 100%;
+}
+
+.flexDesktop { 
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: 100px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.flexMobile { 
+  align-items: center;
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: 100px;
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.titleMobile {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .linkDesktop {
   font-size: 1.5rem;
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.iconLink {
+  height: 30px;
+}
+
+ 
+
+.burger {
+  display: block;
+}
+
+@media (min-width: 1025px) {
+  .burger {
+    display: none;
   }
 }

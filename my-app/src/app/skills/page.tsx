@@ -1,60 +1,44 @@
-'use client';
 import {
   BackgroundImage,
   Box,
-  Center,
+  Stack,
+  Title,
+  Text,
   Flex,
   Image,
-  Stack,
-  Text,
-  Title,
+  Center,
 } from '@mantine/core';
-
 import { allOutils, Outils } from '@/data/outils';
 import NextImage from 'next/image';
 import bg from '../../assets/dev.jpg';
-import filter from '../../components/Filter.module.css';
+import classes from "../../styles/skills.module.css";
+import filter from "../../components/Filter.module.css"
 
 export default function Page() {
   return (
     <>
       <BackgroundImage
         src={bg.src}
-        w="100%"
-        h="80vh"
-        radius="xl"
-        c="white"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-        mb="xl"
-        className={filter.filter}
+        className={`${classes.bgImage} ${filter.filter}`}
       >
-        <Box ta="center" style={{ zIndex: 3 }}>
-          <Title fw="bold">
-            Maîtrise des technologies modernes et polyvalence
-          </Title>
-          <Text fw="bold">
+        <Box className={classes.textBox}>
+          <Title className={classes.title}>Maîtrise des technologies modernes et polyvalence</Title>
+          <Text>
             Depuis mes débuts dans le développement web, j’ai acquis une solide
             maîtrise des technologies front-end et back-end
           </Text>
         </Box>
       </BackgroundImage>
-      <Stack w={800} align="center" gap="xl" mx="auto" mt="xl">
+      <Stack className={classes.stack}>
         {allOutils.map((outils, k) => (
           <Stack
             key={k}
-            style={{ borderBottom: '1px solid black' }}
-            pb="xl"
-            w="100%"
-            align="center"
+            className={classes.outilsStack}
           >
-            <Title order={2} ta="center">
+            <Title order={2} className={classes.outilsTitle}>
               {outils.label}
             </Title>
-            <Flex gap="md">
+            <Flex className={classes.flex}>
               {Object.values(outils.infos)
                 .filter((value) => value.often)
                 .map((value, k) => (
@@ -69,19 +53,17 @@ export default function Page() {
 }
 
 const Item = ({ item }: { item: Outils }) => (
-  <Stack mx="md" gap="lg">
+  <Stack className={classes.itemStack}>
     <Center>
       {item.logo && (
         <Image
           src={item.logo}
-          w={75}
-          h={75}
+          className={classes.itemLogo}
           alt={`logo ${item.name}`}
-          fit="contain"
           component={NextImage}
         />
       )}
     </Center>
-    <Text ta="center">{item.name}</Text>
+    <Text className={classes.itemName}>{item.name}</Text>
   </Stack>
 );
