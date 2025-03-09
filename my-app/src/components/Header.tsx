@@ -45,7 +45,7 @@ export const Header = () => {
             <IconBrandLinkedinFilled size="100%" />
           </Link>
           <a href="/CV - Cécile LECERF.pdf" download>
-            <Button leftSection={<IconDownload />}>Télécharger mon CV</Button>
+            <Button leftSection={<IconDownload />} color='indigo'>Télécharger mon CV</Button>
           </a>
         </Flex>
       </Flex>
@@ -93,6 +93,7 @@ export const Header = () => {
               <Button
                 className={classes.cvButton}
                 leftSection={<IconDownload />}
+                color='indigo'
               >
                 Télécharger mon CV
               </Button>

@@ -14,6 +14,7 @@
 
 .flexMobile { 
   align-items: center;
+  justify-content: space-between;
   margin-top: var(--mantine-spacing-xl);
   margin-bottom: 100px;
   @media (min-width: 1025px) {
