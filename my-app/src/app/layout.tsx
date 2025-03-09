@@ -28,7 +28,7 @@ export default function RootLayout({
       </head>
 
       <body style={{}}>
-        <MantineProvider theme={theme} >
+        <MantineProvider theme={theme}>
           <Box px={{ base: 20, sm: 100 }}>
             <Header />
             <main>{children}</main>

@@ -35,7 +35,7 @@ import sihmati5 from '../assets/projects/sihmati/yoga 1.png';
 import spotify1 from '../assets/projects/spotify/lolo.png';
 import spotify2 from '../assets/projects/spotify/Liste artiste.png';
 import spotify3 from '../assets/projects/spotify/spash screen.png';
-import { AlphacorpProject } from '@/LayoutProject/Alphacorp';
+import { AlphacorpProject } from '@/LayoutProject/AlphacorpProject';
 
 type Work = 'Front' | 'Back' | 'WebDesign' | 'DA' | 'Marketing';
 
@@ -43,17 +43,16 @@ export interface Project {
   title: string;
   works: Work[];
   layout: {
-
-    what: ReactNode,
-    why?: ReactNode,
-    me: ReactNode
-    more?: ReactNode,
+    what: ReactNode;
+    why?: ReactNode;
+    me: ReactNode;
+    more?: ReactNode;
     infos: {
-      contexte: "Scolaire" | "Scolaire - cas client" | "Profesionnel"
-      timing: string
-      numberOfPeople: number
-    }
-  }
+      contexte: 'Scolaire' | 'Scolaire - cas client' | 'Profesionnel';
+      timing: string;
+      numberOfPeople: number;
+    };
+  };
   outils?: Partial<
     Record<'Outils' | 'Frameworks' | 'Languages' | 'Librairies', Outils[]>
   >;
@@ -65,15 +64,15 @@ export const projects: Project[] = [
     title: '',
     works: [],
     layout: {
-      what: "",
-      why: "",
-      me: "",
+      what: '',
+      why: '',
+      me: '',
       infos: {
-        contexte: "Profesionnel",
-        timing: "",
-        numberOfPeople: 0
-      }
-    }
+        contexte: 'Profesionnel',
+        timing: '',
+        numberOfPeople: 0,
+      },
+    },
   },
   {
     title: 'Iota',
@@ -166,13 +165,13 @@ export const projects: Project[] = [
     works: ['Front'],
     layout: {
       what: <>En cours de rédaction...</>,
-      why: "",
-      me: "",
+      why: '',
+      me: '',
       infos: {
-        contexte: "Profesionnel",
-        timing: "",
-        numberOfPeople: 0
-      }
+        contexte: 'Profesionnel',
+        timing: '',
+        numberOfPeople: 0,
+      },
     },
     outils: {
       Frameworks: [frameworks.vue],
@@ -213,13 +212,13 @@ export const projects: Project[] = [
     works: [],
     layout: {
       what: <> </>,
-      why: "",
-      me: "",
+      why: '',
+      me: '',
       infos: {
-        contexte: "Profesionnel",
-        timing: "",
-        numberOfPeople: 0
-      }
+        contexte: 'Profesionnel',
+        timing: '',
+        numberOfPeople: 0,
+      },
     },
   },
 ];

@@ -1,5 +1,5 @@
 import { Project } from '@/data/project';
-import { Badge, Box, Flex, Paper, Stack, StackProps, Text } from '@mantine/core';
+import { Badge, Flex, Stack, StackProps, Text } from '@mantine/core';
 import { useMantineTheme } from '@mantine/core';
 import classes from './Card.module.css';
 import Link from 'next/link';
@@ -34,10 +34,8 @@ export const Card = ({
         style={(theme) => ({ borderRadius: theme.radius.lg })}
         {...props}
       >
-
-
         {/* Badges */}
-        <Flex gap="sm" >
+        <Flex gap="sm">
           {project.works.slice(0, 3).map((w, i) => (
             <Badge
               key={i}

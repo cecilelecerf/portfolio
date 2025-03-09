@@ -20,7 +20,7 @@ export const Company = () => (
         <Text>{comp.description}</Text>
         <Text size="xs">{comp.time}</Text>
         <Link href={`/projects/${comp.id_project}`}>
-          <Button my="md" leftSection={'->'} color='yellow'>
+          <Button my="md" leftSection={'->'} color="yellow">
             Voir le projet
           </Button>
         </Link>

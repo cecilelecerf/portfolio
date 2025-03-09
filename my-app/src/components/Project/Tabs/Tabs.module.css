@@ -5,9 +5,9 @@
   transition: position 0.3s ease;
 }
 
-.indicator { 
+.indicator {
   border-radius: var(--mantine-radius-xl);
-  border: 1px solid var(--mantine-color-gray-3); 
+  border: 1px solid var(--mantine-color-gray-3);
 }
 
 .tab {

@@ -1,6 +1,6 @@
 .linkDesktop {
-    font-size: 1.5rem;
-    &:hover{
-        text-decoration: underline;
-    }
+  font-size: 1.5rem;
+  &:hover {
+    text-decoration: underline;
+  }
 }

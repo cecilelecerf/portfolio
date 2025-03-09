@@ -1,13 +1,6 @@
 import { TabsComponent } from '@/components/Project/Tabs/TabsComponent';
 import { projects } from '@/data/project';
-import {
-  Box,
-  Center,
-  SimpleGrid,
-  Space,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Box, Center, SimpleGrid, Space, Text, Title } from '@mantine/core';
 import { PictureProject } from '@/components/Project/PictureProject/PictureProject';
 import { SingleProject } from '@/components/Project/SimpleProject/SingleProject';
 
@@ -27,7 +20,7 @@ export default async function Page({ params }: PageProps) {
   const thresholds = [800, 1200, 1600, 2000];
 
   return (
-    <Box  >
+    <Box>
       <SingleProject project={project} />
       <Space h={50} />
       <TabsComponent outils={project.outils} />

@@ -1,5 +1,5 @@
 'use client';
-import { Image, Modal, Paper } from '@mantine/core';
+import { Image, Modal } from '@mantine/core';
 import { useDisclosure, useHover } from '@mantine/hooks';
 import { StaticImageData } from 'next/image';
 import NextImage from 'next/image';
@@ -21,7 +21,6 @@ export const PictureProject = ({ picture }: { picture: StaticImageData }) => {
         />
       </Modal>
 
-
       <Image
         src={picture}
         onClick={open}
@@ -36,7 +35,8 @@ export const PictureProject = ({ picture }: { picture: StaticImageData }) => {
           overflow: 'hidden',
           transform: hovered ? `translateY(-20px)` : 'none',
           transition: 'transform 0.3s ease',
-        }} />
+        }}
+      />
     </>
   );
 };

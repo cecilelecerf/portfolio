@@ -1,6 +1,6 @@
-.root { 
+.root {
   overflow: hidden;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
   height: 250px;
   justify-content: space-between;
   &:hover {

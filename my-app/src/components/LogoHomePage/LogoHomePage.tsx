@@ -1,4 +1,4 @@
-import { Box, BoxProps, Flex, SimpleGrid, } from '@mantine/core';
+import { Box, BoxProps, SimpleGrid } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { Card } from '../Project/Card/Card';
 import { projects } from '@/data/project';
@@ -35,8 +35,7 @@ export const LogoHomePage = () => {
     return (
       <SimpleGrid cols={1} w="100%" mt="xl">
         {projectProps.map((project, index) => (
-          <Card key={index} project={projects[index + 1]} step={index + 1}
-          />
+          <Card key={index} project={projects[index + 1]} step={index + 1} />
         ))}
       </SimpleGrid>
     );
@@ -44,10 +43,14 @@ export const LogoHomePage = () => {
     return (
       <Box pos="relative" w={515.93} h={482}>
         {projectProps.map((project, index) => (
-          <Card key={index} project={projects[index + 1]} step={index + 1} pos="absolute"
-            {...project} />
+          <Card
+            key={index}
+            project={projects[index + 1]}
+            step={index + 1}
+            pos="absolute"
+            {...project}
+          />
         ))}
       </Box>
     );
 };
-

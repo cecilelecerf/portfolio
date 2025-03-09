@@ -13,13 +13,13 @@ const eslintConfig = [
   ...compat.extends(
     'next/core-web-vitals',
     'next/typescript',
-    'plugin:@typescript-eslint/recommended', // Support TypeScript
-    'plugin:prettier/recommended', // Intègre Prettier
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ),
   {
     rules: {
-      'react/react-in-jsx-scope': 'off', // Inutile avec Next.js
-      'prettier/prettier': 'error', // Erreur sur conflits Prettier
+      'react/react-in-jsx-scope': 'off',
+      'prettier/prettier': 'error',
     },
   },
 ];
